@@ -1,5 +1,5 @@
 <h1 align="center"> <a href="https://www.facebook.com/groups/318166702534463">PIED TEAM</a> - TINKER </h1>           
-<h2 align="center"> 🔥Starting project https://www.free-css.com/assets/files/free-css-templates/preview/page243/tinker/ </h2>
+<h2> 🔥Starting project https://www.free-css.com/assets/files/free-css-templates/preview/page243/tinker/ </h2>
 <p align="center"><i>(a project to practice skills and for learning purpose)</i></p>
 
 ### Division of work:
