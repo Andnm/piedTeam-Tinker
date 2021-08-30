@@ -3,8 +3,8 @@
 <p align="center"><i>(a project to practice skills and for learning purpose)</i></p>
 
 ### Division of work:
-* Tuấn Kiệt
-      **Menu**
+- Tuấn Kiệt:
+     - Menu
      ###### To-do description: 
      <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294341-2553ff0d-4287-478c-9f9b-d11daee39329.png" width="580px"/></p>
       **About us**
@@ -13,7 +13,7 @@
       **Feedback**
      ###### To-do description: 
      <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294538-cd63da9b-2fa7-4040-93e2-33249009848d.png" width="580px"/></p>
- * Minh An
+- Minh An:
       **Portfolio**
      ###### To-do description: 
      <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294572-4d1fe3a0-5d73-4fe1-97b1-4d3074a75b42.png" width="580px"/></p>
@@ -37,4 +37,3 @@
 <img align="left" alt="JS" width="50px" src="https://media.vlpt.us/images/charlie-lyc/post/2244e9e8-7621-4df7-86cb-5a11ad3137eb/Javascript_logo-1170x850.jpg"/>
 <img align="left" alt="SCSS" width="44px" src="https://sass-lang.com/assets/img/styleguide/seal-color-reversed-c50d9b78.png"/>
 <img align="left" alt="PUG" width="44px" src="https://camo.githubusercontent.com/2eb688a747805c9acd144faf728c8a30f86fc4ca5fb39e6528232f0372151364/68747470733a2f2f63646e2e7261776769742e636f6d2f7075676a732f7075672d6c6f676f2f656563343336636565386664396431373236643738333963626539396431663639343639326330632f5356472f7075672d66696e616c2d6c6f676f2d5f2d636f6c6f75722d3132382e737667"/>
-
