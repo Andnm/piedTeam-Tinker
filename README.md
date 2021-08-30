@@ -4,15 +4,9 @@
 
 ### Division of work:
 - Tuấn Kiệt:
-     - Menu
-     ###### To-do description: 
-     <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294341-2553ff0d-4287-478c-9f9b-d11daee39329.png" width="580px"/></p>
-     - About us
-     ###### To-do description: 
-     <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294468-1b2e2f15-e775-4637-bfee-fbc7829b84f0.png" width="580px"/></p>
-     - Feedback
-     ###### To-do description: 
-     <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294538-cd63da9b-2fa7-4040-93e2-33249009848d.png" width="580px"/></p>
+     - Menu: <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294341-2553ff0d-4287-478c-9f9b-d11daee39329.png" width="580px"/></p>
+     - About us: <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294468-1b2e2f15-e775-4637-bfee-fbc7829b84f0.png" width="580px"/></p>
+     - Feedback: <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294538-cd63da9b-2fa7-4040-93e2-33249009848d.png" width="580px"/></p>
 - Minh An:
      - Portfolio
      ###### To-do description: 
