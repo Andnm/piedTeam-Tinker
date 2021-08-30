@@ -1,5 +1,5 @@
 <h1 align="center"> <a href="https://www.facebook.com/groups/318166702534463">PIED TEAM</a> - TINKER </h1>           
-<h2> 🔥Starting project https://www.free-css.com/assets/files/free-css-templates/preview/page243/tinker/ </h2>
+<h2 align="center">🔥Starting project https://www.free-css.com/assets/files/free-css-templates/preview/page243/tinker/</h2>
 <p align="center"><i>(a project to practice skills and for learning purpose)</i></p>
 
 ### Division of work:
@@ -13,6 +13,7 @@
       **Feedback**
      ###### To-do description: 
      <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294538-cd63da9b-2fa7-4040-93e2-33249009848d.png" width="580px"/></p>
+ * Minh An
       **Portfolio**
      ###### To-do description: 
      <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294572-4d1fe3a0-5d73-4fe1-97b1-4d3074a75b42.png" width="580px"/></p>
