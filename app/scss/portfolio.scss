@@ -1,0 +1,102 @@
+.container__our-gallery {
+    font-family: 'Roboto', arial, sans-serif;
+    // max-width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+
+    .gallery-content {
+        background-color: #33c1cf;
+        width: 45rem;
+        // position: relative;
+
+        .section-heading {
+            width: 36rem;
+            // position: absolute;
+            // right: 0;
+            // top: 20rem;
+
+            margin-top: 20rem;
+            margin-left: 6rem;
+            
+            &__title {
+                color: #ffffff;
+
+                h4 {
+                    text-transform: uppercase;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                }
+
+                .line-dec {
+                    width: 27rem;
+                    height: 0.1rem;
+                    background-color: rgba(250,250,250,0.5);
+                    margin: 2rem 0rem 1.5rem 0rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 24px;
+                    padding-right: 70px;
+                }         
+            }
+
+            &__filter {
+                margin-top: 6rem;
+
+                .filter-list {
+                    list-style-type: none;
+
+                    &__item {
+                        cursor: pointer;
+                        color: #ffffff;
+                        font-size: 1.5rem;
+                        font-weight: 550;
+                        padding-bottom: 2rem;
+                    }
+
+                    #filter-list__item1 {
+                        color: #F7C552;
+                    }
+                }
+            }
+        }
+    }
+
+    .gallery-image {
+        // position: relative;
+
+        .collection-image {
+            width: 75rem;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 3rem;
+            margin-top: 3rem;
+
+            &__item {
+                img {
+                    width: 34.5rem;
+                    background-size: cover;
+                }
+                
+            }
+        }
+    }
+
+    @media (max-width: 1200px){
+        .gallery-image {
+            .collection-image {
+                &__item {
+                    img {
+                        width: 27.8rem;
+                        background-size: cover;
+                    }
+                    
+                }
+            }           
+        }
+    }
+}
