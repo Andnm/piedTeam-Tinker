@@ -8,14 +8,15 @@
     .gallery-content {
         background-color: #33c1cf;
         width: 45rem;
+        height: 73.2rem;
         // position: relative;
-
         
         .section-heading {
             width: 36rem;
             // position: absolute;
             // right: 0;
             // top: 20rem;
+            
 
             margin-top: 20rem;
             margin-left: 6rem;
@@ -74,10 +75,10 @@
             width: 75rem;
             display: flex;
             flex-wrap: wrap;
-            margin-left: 3rem;
-            margin-top: 3rem;
+            margin: 3rem 0rem 3rem 3rem;
 
             &__item {
+                height: 224.02px;
                 img {
                     width: 34.5rem;
                     background-size: cover;
