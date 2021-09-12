@@ -1,0 +1,26 @@
+.header {
+    background-color: darkgrey;
+    height: 80px;
+    text-align: center;
+    .container {
+        border: 1px solid springgreen;
+        padding: 0 15px;
+        margin: 0 auto;
+        .navbar-inverse {
+            border: 1px solid steelblue;
+            .navbar-header {
+                .navbar-toggle {
+                    margin-top: 22px;
+                    border-color: #f7c552;
+                    background-color: #f7c552;
+                }
+            }
+
+        }
+        
+    }
+    
+}
+    
+                    
+                    
