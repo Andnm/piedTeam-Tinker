@@ -7,15 +7,13 @@
      ###### To-do description:
      - Menu <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294341-2553ff0d-4287-478c-9f9b-d11daee39329.png" width="580px"/></p>
      - About us <p align="center"><img src="https://user-images.githubusercontent.com/68959566/132606618-4451e90a-90d7-4f13-ba0a-bdf583cf7c91.png" width="580px"/></p>
-* Quang Huy:
-     ###### To-do description:
-     - Feedback <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294538-cd63da9b-2fa7-4040-93e2-33249009848d.png" width="580px"/></p>
 * Minh An: 
      ###### To-do description:
      - Portfolio <p align="center"><img src="https://user-images.githubusercontent.com/68959566/132606662-9fa1469f-a775-454a-a482-1ea22045cdd1.png" width="580px"/></p>
      - Blog <p align="center"><img src="https://user-images.githubusercontent.com/68959566/132606715-a9011505-f722-413f-a7c3-452e8acf8188.png" width="580px"/></p>
 * Bảo Minh:
      ###### To-do description:
+     - Feedback <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294538-cd63da9b-2fa7-4040-93e2-33249009848d.png" width="580px"/></p>
      - Contact us <p align="center"><img src="https://user-images.githubusercontent.com/68959566/131294634-1242f6cd-7095-447a-bfdb-96586cfa2b5c.png" width="580px"/></p>
      
 ### Participants:
@@ -24,7 +22,6 @@
      - <a href="https://www.facebook.com/tuankiet.truongle.22" target="_blank">Tuấn kiệt</a>      
      - <a href="https://www.facebook.com/DangNguyenMinhAn158/" target="_blank">Minh An</a>  
      - <a href="https://www.facebook.com/hpbm129" target="_blank">Bảo Minh</a>  
-     - <a href="https://www.facebook.com/quanghuyhihi128" target="_blank">Quang Huy</a>  
 
 ### Languages and Tools:
 <img align="left" alt="Visual Studio Code" width="44px" src="https://www.solucionex.com/sites/default/files/posts/imagen/vscode-800x450.png"/>
