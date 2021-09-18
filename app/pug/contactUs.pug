@@ -8,6 +8,17 @@ section.contact
       p.contact_message_text
         | Nunc posuere non quam at pharetra. Mauris tincidunt purus vel ultrices malesuada. Integer euismod erat ut nulla ultrices, ut auctor eros feugiat.
       button.contact_message_btn SEND US A MESSAGE 
+  
+  .submit
+    .submit_form
+      button.submit_button-close
+        i.fas.fa-times
+      form
+        input.submit_text(type='text' placeholder='Your name...')
+        input.submit_text(type='text' placeholder='Your email...')
+        textarea.submit_text.message(placeholder='Your message...')
+      button.submit_button-submit SEND MESSAGE
+
   // map
   .contact_map
     .mapouter
@@ -62,4 +73,12 @@ section.contact
             i.fas.fa-volleyball-ball
   .contact_footer_lastblock
   script(src='https://kit.fontawesome.com/5a8f26faaf.js' crossorigin='anonymous')
+  script.
+    const submit = document.querySelector(".submit");
+    document.querySelector(".contact_message_btn").addEventListener("click", () => {
+    submit.style.display = "block";
+    })
+    document.querySelector(".submit_button-close").addEventListener("click", () => {
+    submit.style.display = "none";
+    })
 

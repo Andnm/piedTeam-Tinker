@@ -2,12 +2,12 @@ section.slider
   .slider_container
     .slider_slides
       // radio buttons start
-      input#radio1(type='radio' name='radio-btn')
+      input#radio1(type='radio' name='radio-btn' checked)
       input#radio2(type='radio' name='radio-btn')
       input#radio3(type='radio' name='radio-btn')
       input#radio4(type='radio' name='radio-btn')
       // radio buttons end
-      // slide images start
+      // slide images start 
       .slider_slide.first
         .slider_content
           p.slider_text
@@ -55,12 +55,3 @@ section.slider
       label.manual-btn(for='radio4')
     // manual navigation end
   // image slider end
-  script(type='text/javascript').
-    var counter = 1;
-    setInterval(function(){
-    document.getElementById('radio' + counter).checked = true;
-    counter++;
-    if(counter > 4){
-    counter = 1;
-    }
-    }, 5000);
