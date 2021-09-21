@@ -3,6 +3,8 @@
     font-family: 'Roboto',arial,sans-serif;
     position: fixed;
     width: 100%;
+    z-index: 2;
+    transition: 0.5s;
     .container {
         height: 100%;
         padding: 0 15px;
@@ -46,9 +48,7 @@
                     }
                     :first-child {
                         margin-top: 0;
-                    }
-                    
-                    
+                    }  
                 }             
                 
                 .navbar-brand {
@@ -58,18 +58,21 @@
                     text-decoration: none;
                     color: #fff;
                     text-transform: uppercase;
+                    cursor: pointer;
                     span {
                         font-style: normal;
                         color: #f7c552;
                         font-size: 32px;
                     }
                 }
+                .navbar-brand__scroll-effect {
+                    color: #333;
+                }
             }
             .navbar-collapse {  
                 height: 100%; 
                 .navbar-nav {
                     height: 100%;
-                    // display: none;
                     float: right;
                     list-style-type: none;
                     li {
@@ -78,14 +81,15 @@
                         transition: 0.3s;
                         line-height: 1.42857143;
                         text-transform: uppercase;
+                        color: rgb(112, 75, 75);
                         a {
                             text-decoration: none;
-                            color: #fff;
                             font-size: 13px;
                             letter-spacing: 0.5px;
-                        }
-                        
-
+                            font-weight: 300;                           
+                            color: #ffff;
+                            cursor: pointer;
+                        }  
                     }
                 }
             }
@@ -93,6 +97,24 @@
         
     }
     
+}
+
+.header__scroll-effect{
+    background-color: rgba(250,250,250,0.98);
+    transition: 0.5s;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+}
+.navbar-brand__scroll-effect{
+    color: #333;
+    transition: 0.5s;
+}
+.a__scroll-effect {
+    color: #121212!important;
+    transition: 0.5s;
+}
+
+.baner-content {
+    background-position: center calc(50% + 0px);
 }
     
 .parallax-content {
@@ -103,7 +125,7 @@
     vertical-align: middle;
     min-height: 100vh;
     background-size: cover;
-    background-position: center center;
+    font-family: 'Roboto', sans-serif;
     .container {
         padding: 0 15px;
         margin: 0 auto;
@@ -123,8 +145,7 @@
                     font-weight: 700;
                     color: #33c1cf!important;
                 }
-            }
-                
+            }                
             p {
                 color: #fff;
                 font-size: 14px;
@@ -133,8 +154,9 @@
                 margin: 0 0 10px;
             }
             .primary-white-button {
+                cursor: pointer;
                 margin-top: 25px;
-                .scroll-link {
+                a {
                     display: inline-block;
                     background-color: #fff;
                     font-size: 13px;
@@ -144,49 +166,23 @@
                     letter-spacing: 1px;
                     text-transform: uppercase;
                     text-decoration: none;
-                    border-radius: 20px;
+                    border-radius: 20px;                    
                 }
                 :hover {
                     background-color: #f89624;  
                     transition: 0.3s;  
                 }
             }
-        }
-        
-          
-    }
-        
+        }        
+    }       
 }
 
 @media (max-width: 768px) {
-    .header {
-        
-        .container {
-        
-            .navbar-inverse {
-                .navbar-header {
-                    
-                
-                    .navbar-toggle {
-                        .sr-only {
-                         
-                        }
-                        .icon-bar {
-                            
-                            
-                        }
-                       
-                    }
-                    .navbar-brand {
-
-                        }
-                    }
-                }
+    .header {       
+        .container {        
                 .navbar-collapse {  
-                    
                     .navbar-nav {
                         width: 100%;
-                        // height: 350%!important;
                         position: absolute;
                         top: 100%;
                         left: 50%;
@@ -195,9 +191,9 @@
                         z-index: 999;
                         background-color: #f7f7f7 !important;
                         opacity: 95%;
-                        height: 0%!important;       
+                        height: 350%!important;       
                         overflow: hidden;
-                        transition: 0.5s;
+                        transition: 0.3s;
                         li {
                             text-align: center;
                             margin: 0!important;
@@ -207,21 +203,20 @@
                                 font-family: 'Roboto',sans-serif!important;
                                 line-height: 55px;
                                 color: #343434!important;
-                            }
-                            
-    
+                            }   
                         }
                     }
+                    .unactived-menu {
+                        height: 0%!important;
+                        transition: 0.3s;
+                    }
                 }
-            }
-            
-    }
-    
+            }           
+    }   
 }
  
 @media (min-width: 768px) {
     .header {
-        
         .container {
             width: 750px;
             .navbar-inverse {
@@ -229,255 +224,95 @@
                     width: auto;
                     .navbar-toggle {
                         display: none;
-                        .sr-only {
-                         
-                        }
-                        .icon-bar {
-                            
-                            
-                        }
-                       
                     }
-
                     .navbar-brand {
                         padding-left: 0;
-                        span {
-                           
-                        }
                     }
-                    
                 }
                 .navbar-collapse {  
-                    
                     .navbar-nav {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         padding: 0 15px;
-
-                        li {
-                           
-                            a {
-                                
-                                
-                            }
-                            
-    
-                        }
                     }
                 }
             }
-            
         }
-        
     }
-
     .parallax-content {
         .container {
             width: 750px;
-            .text-content {
-    
-            }
-            h2 {
-            }
-                
-            p {                
-            }
-            .primary-white-button {
-                .scroll-link {
-                    
-                }
-            }
-              
         }
-            
     }
 }
 
 @media (min-width: 992px) {
     .header {
-        
         .container {
             width: 970px;
             .navbar-inverse {
-                
                 .navbar-header {
-                    .navbar-toggle {
-                       
-                        .sr-only {
-                         
-                        }
-                        .icon-bar {
-                            
-                            
-                        }
-                       
-                    }
                     .navbar-brand {
                         padding-left: 0;
-                        span {
-                           
-                        }
                     }
                 }
                 .navbar-collapse {  
-                    
                     .navbar-nav {
                         float: right;
-                        li {
-                           
-                            a {
-                                
-                                
-                            }
-                            
-    
-                        }
                     }
                 }
             }
-            
         }
-        
     }
-
     .parallax-content {
         .container {
             width: 970px;
-            .text-content {
-    
-            }
-            h2 {
-            }
-                
-            p {              
-            }
-            .primary-white-button {
-                .scroll-link {
-                    
-                }
-            }
-              
         }
-            
     }
 }
 
 @media (min-width: 1200px) {
     .header {
-        
         .container {
             width: 1170px;
             .navbar-inverse {
-              
                 .navbar-header {
-                    
-                    .navbar-toggle {
-                       
-                        .sr-only {
-                         
-                        }
-                        .icon-bar {
-                            
-                            
-                        }
-                       
-                    }
                     .navbar-brand {
                         padding-left: 0;
-                        span {
-                           
-                        }
                     }
                 }
                 .navbar-collapse {  
-                    
                     .navbar-nav {
                         float: right;
-                        li {
-                           
-                            a {
-                                
-                                
-                            }
-                            
-    
-                        }
                     }
                 }
             }
-            
         }
-        
     }
-    
     .parallax-content {
         .container {
             width: 1170px;
-            .text-content {
-    
-            }
-            h2 {
-            }
-                
-            p {
-                
-            }
-            .primary-white-button {
-                .scroll-link {
-                    
-                }
-            }
-              
         }
-            
     }
 }
 
 @media (max-width: 991px) {
     .parallax-content {
         .container {
-            .text-content {
-    
-            }
-            h2 {
-            }
-                
             p {
-                // background-color: chartreuse;
                 padding: 0 15% !important;
             }
-            .primary-white-button {
-                .scroll-link {
-                    
-                }
-            }
-              
         }
-            
     }
 }
 
 @media (max-width: 768px) {
     .parallax-content {
         .container {
-            .text-content {
-    
-            }
-            h2 {
-            }
-                
             p {
-                // background-color: chocolate;
                 padding: 0 10% !important;
             }
-            .primary-white-button {
-                .scroll-link {
-                    
-                }
-            }
-              
         }
-            
     }
 }
