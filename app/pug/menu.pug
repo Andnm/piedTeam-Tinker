@@ -72,6 +72,8 @@ script.
     const itemList = document.querySelectorAll('.scroll-link');
     itemList.forEach(item => {
         item.addEventListener('click', () => {
+            if (!toggleList.classList.contains('unactived-menu')) 
+                toggleList.classList.add('unactived-menu');
             let el = document.getElementById(item.getAttribute('data-id'));
             console.log(item.getAttribute('data-id'));
             el.scrollIntoView({behavior: "smooth", block: "start"});
@@ -81,6 +83,8 @@ script.
     const scrollTop = document.querySelectorAll('.scroll-top');
     scrollTop.forEach((item) => {
         item.addEventListener('click', () => {
+            if (!toggleList.classList.contains('unactived-menu')) 
+                toggleList.classList.add('unactived-menu');
             window.scrollTo({
                 top: 0,
                 left: 0,
