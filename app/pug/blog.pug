@@ -6,18 +6,14 @@
                     h4 our blog posts
                     div.line-dec 
                     p Nam vulputate elementum nulla, sit amet congue ipsum malesuada pretium. Vivamus vel gravida quam.
-                .section-heading__filter 
+                .section-heading__filter                   
                     ul.filter-list 
-                        li(class='filter-list__item actived' id='1')
-                            a.filter-list__item__link  Nulla Eget Convallis Augue 
-                        li(class='filter-list__item' id='2') 
-                            a.filter-list__item__link Quisque Ultricies Maximus 
-                        li(class='filter-list__item' id='3')
-                            a.filter-list__item__link Sed Vel Elit Et Lorem 
-                        li(class='filter-list__item' id='4')
-                            a.filter-list__item__link Vivamus Purus Neque
+                        btn(class='filter-list__item actived' id='1') Nulla Eget Convallis Augue 
+                        btn(class='filter-list__item' id='2') Quisque Ultricies Maximus 
+                        btn(class='filter-list__item' id='3') Sed Vel Elit Et Lorem 
+                        btn(class='filter-list__item' id='4') Vivamus Purus Neque
         .blog-gallery
-            .blog-content(data-content="1" class="tab-content-item")
+            .blog-content(data-content="1" class="actived")
                 .blog-content__image 
                     img(src="./images/blog_item_01.jpg")
                 .blog-content__text 
@@ -30,7 +26,7 @@
                         a 26 September 2045
                     p Donec interdum scelerisque auctor. Nulla id lorem auctor, bibendum lectus elementum, porta felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
 
-            .blog-content(data-content="2" class="tab-content-item")
+            .blog-content(data-content="2")
                 .blog-content__image 
                     img(src="./images/blog_item_02.jpg")
                 .blog-content__text 
@@ -43,7 +39,7 @@
                         a 14 September 2045
                     p Etiam fringilla posuere pretium. Maecenas tempor pellentesque elit in dapibus. Curabitur viverra urna sem, ut sollicitudin sem congue vel. Donec fringilla augue in justo molestie fermentum quis ac mi.
 
-            .blog-content(data-content="3" class="tab-content-item") 
+            .blog-content(data-content="3") 
                 .blog-content__image 
                     img(src="./images/blog_item_03.jpg")
                 .blog-content__text 
@@ -56,7 +52,7 @@
                         a 20 September 2045
                     p Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id ipsum porta, dictum sem sed, bibendum quam. Maecenas mattis risus eget orci rhoncus.
 
-            .blog-content(data-content="4" class="tab-content-item") 
+            .blog-content(data-content="4") 
                 .blog-content__image 
                     img(src="./images/blog_item_04.jpg")
                 .blog-content__text 
@@ -69,9 +65,9 @@
                         a 14 September 2045
                     p Aliquam erat volutpat. Nulla at nunc nec ante rutrum congue id in diam. Nulla at lectus non turpis placerat volutpat lacinia ut mi. Quisque ultricies maximus justo a blandit. Donec sit amet commodo arcu. Sed sit amet iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.
     
-    .script 
+    script.
         const btnList = document.querySelectorAll('.filter-list__item');
-        const contentList = document.querySelectorAll('.tab-content-item');
+        const contentList = document.querySelectorAll('.blog-content');
 
         btnList.forEach(btn => {
             btn.addEventListener('click', event => {
@@ -83,7 +79,7 @@
                 contentList.forEach(contentTab => {
                     contentTab.classList.remove('actived')
                 })
-                document.querySelector(`.tab-content-item[data-content='${event.target.id}']`).classList.add('actived')
+                document.querySelector(`.blog-content[data-content='${event.target.id}']`).classList.add('actived')
             })
         })
 

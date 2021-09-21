@@ -58,20 +58,20 @@
                             background-color: #ffffff;
                             margin-bottom: 2rem;
                             padding: 1.2rem 1.2rem;
-                            text-align: center;
                             cursor: pointer;
-
-                            a {
-                                text-align: center;
-                                font-size: 1.5rem;
-                                font-weight: 550;
-                            }
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1.5rem;
+                            font-weight: 550;
                         }
 
-                        .actived {
-                            a {
-                                color: #F7C552;;
-                            }
+                        &__item:hover {
+                            color: #F7C552;
+                        }
+
+                        .actived {                       
+                                color: #F7C552;                        
                         }
                     }
                 }
@@ -84,6 +84,7 @@
 
             .blog-content {
                 width: 75rem;
+                display: none;
 
                 &__image {
                     height: 311.69px;
@@ -119,6 +120,10 @@
                         margin: 1rem 0rem;
                     }
                 }
+            }
+
+            .actived {
+                display: block;
             }
 
         }
