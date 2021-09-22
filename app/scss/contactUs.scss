@@ -101,9 +101,22 @@
     &.first {
       padding-right: 10px;
       border-right: 1px solid rgb(107, 107, 107);
+      @media only screen and (max-width: 330px) {
+        display: block;
+        text-align: center;
+        padding: 0;
+        border: 0;
+      }
     }
     &.second {
       padding-left: 10px;
+      @media only screen and (max-width: 330px) {
+        display: block;
+        text-align: center;
+        padding: 0;
+        border: 0;
+        padding-top: 10px;
+      }
     }
   }
 
