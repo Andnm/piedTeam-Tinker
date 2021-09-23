@@ -7,15 +7,15 @@ div.container__our-gallery
                 p In malesuada placerat ligula et bibendum. Aenean eget urna enim. Sed enim ante, bibendum nec dictum ac, gravida ac lectus.
             div.section-heading__filter
                 ul.filter-list
-                    li(class='filter-list__item' id='filter-list__item1') 
+                    li(class='filter-list__item navtab-portfolio actived-portfolio-selection') 
                         span Show All 
-                    li.filter-list__item 
+                    li(class='filter-list__item navtab-portfolio')
                         span Branding 
-                    li.filter-list__item 
+                    li(class='filter-list__item navtab-portfolio')
                         span Graphic 
-                    li.filter-list__item 
+                    li(class='filter-list__item navtab-portfolio')
                         span Nature 
-                    li.filter-list__item 
+                    li(class='filter-list__item navtab-portfolio')
                         span Animation
     div.gallery-image
         div.collection-image 
@@ -32,4 +32,16 @@ div.container__our-gallery
             div.collection-image__item 
                 img(src="./images/portfolio_item_06.jpg")
     script.
-        
+        const selectionList = document.querySelectorAll('.navtab-portfolio');
+
+        selectionList.forEach(select => {
+            select.addEventListener('click', event => {
+                selectionList.forEach(_select => {
+                    _select.classList.remove('actived-portfolio-selection')
+                })        
+                event.target.classList.add('actived-portfolio-selection') 
+
+
+            })
+        })
+
