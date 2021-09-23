@@ -8,10 +8,10 @@
                     p Nam vulputate elementum nulla, sit amet congue ipsum malesuada pretium. Vivamus vel gravida quam.
                 .section-heading__filter                   
                     ul.filter-list 
-                        btn(class='filter-list__item actived-blog-btn' id='1') Nulla Eget Convallis Augue 
-                        btn(class='filter-list__item' id='2') Quisque Ultricies Maximus 
-                        btn(class='filter-list__item' id='3') Sed Vel Elit Et Lorem 
-                        btn(class='filter-list__item' id='4') Vivamus Purus Neque
+                        btn(class='filter-list__item navtab-blog actived-blog-btn' id='1') Nulla Eget Convallis Augue 
+                        btn(class='filter-list__item navtab-blog' id='2') Quisque Ultricies Maximus 
+                        btn(class='filter-list__item navtab-blog' id='3') Sed Vel Elit Et Lorem 
+                        btn(class='filter-list__item navtab-blog' id='4') Vivamus Purus Neque
         .blog-gallery
             .blog-content(data-content="1" class="actived-blog-content")
                 .blog-content__image 
@@ -66,7 +66,7 @@
                     p Aliquam erat volutpat. Nulla at nunc nec ante rutrum congue id in diam. Nulla at lectus non turpis placerat volutpat lacinia ut mi. Quisque ultricies maximus justo a blandit. Donec sit amet commodo arcu. Sed sit amet iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.
 
     script.
-        const btnList = document.querySelectorAll('.filter-list__item');
+        const btnList = document.querySelectorAll('.navtab-blog');
         const contentList = document.querySelectorAll('.blog-content');
 
         btnList.forEach(btn => {

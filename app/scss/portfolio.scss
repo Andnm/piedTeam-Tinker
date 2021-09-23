@@ -52,8 +52,14 @@
                         padding-bottom: 2rem;
                     }
 
-                    .actived-portfolio-selection{
-                        color: #F7C552;
+                    &__item {
+                        .navtab-portfolio.selected {
+                            color: #F7C552;
+                        }
+
+                        .selected {
+                            color: #F7C552;
+                        } 
                     }
                 }
             }

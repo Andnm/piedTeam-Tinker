@@ -7,16 +7,16 @@ div.container__our-gallery
                 p In malesuada placerat ligula et bibendum. Aenean eget urna enim. Sed enim ante, bibendum nec dictum ac, gravida ac lectus.
             div.section-heading__filter
                 ul.filter-list
-                    li(class='filter-list__item navtab-portfolio actived-portfolio-selection') 
-                        span Show All 
-                    li(class='filter-list__item navtab-portfolio')
-                        span Branding 
-                    li(class='filter-list__item navtab-portfolio')
-                        span Graphic 
-                    li(class='filter-list__item navtab-portfolio')
-                        span Nature 
-                    li(class='filter-list__item navtab-portfolio')
-                        span Animation
+                    li(class='filter-list__item actived-portfolio-selection') 
+                        span(class='navtab-portfolio selected') Show All 
+                    li(class='filter-list__item')
+                        span(class='navtab-portfolio') Branding 
+                    li(class='filter-list__item ')
+                        span(class='navtab-portfolio') Graphic 
+                    li(class='filter-list__item')
+                        span(class='navtab-portfolio') Nature 
+                    li(class='filter-list__item')
+                        span(class='navtab-portfolio') Animation
     div.gallery-image
         div.collection-image 
             div.collection-image__item 
@@ -37,11 +37,11 @@ div.container__our-gallery
         selectionList.forEach(select => {
             select.addEventListener('click', event => {
                 selectionList.forEach(_select => {
-                    _select.classList.remove('actived-portfolio-selection')
+                    _select.classList.remove('selected')
                 })        
-                event.target.classList.add('actived-portfolio-selection') 
+                event.target.classList.add('selected') 
 
-
+                
             })
         })
 
