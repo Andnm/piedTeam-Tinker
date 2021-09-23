@@ -69,10 +69,8 @@
                     color: #333;
                 }
             }
-            .navbar-collapse {  
-                height: 100%; 
+            .navbar-collapse {   
                 .navbar-nav {
-                    height: 100%;
                     float: right;
                     list-style-type: none;
                     li {
@@ -215,7 +213,7 @@
     }   
 }
  
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .header {
         .container {
             width: 750px;
