@@ -32,7 +32,6 @@
             p Tinker is free HTML CSS template from templatemo that can be used for any kind of website. Please tell your friends about us. Thank you.
             .primary-white-button 
                 a.scroll-link(data-id="about") Let's Start
-                        
 script.
     const navToggleBtn = document.getElementById('nav-toggle');
     const toggleList =  document.querySelector('.navbar-nav');
@@ -74,20 +73,32 @@ script.
         item.addEventListener('click', () => {
             if (!toggleList.classList.contains('unactived-menu')) 
                 toggleList.classList.add('unactived-menu');
-            let el = document.getElementById(item.getAttribute('data-id'));
+            let ele = document.getElementById(item.getAttribute('data-id'));
             console.log(item.getAttribute('data-id'));
-            el.scrollIntoView({behavior: "smooth", block: "start"});
-        })
+            doScrolling(ele.offsetTop, 600);
+        });
     });
+
+    function doScrolling(elementY, duration) {
+        var startingY = window.pageYOffset;
+        var diff = elementY - startingY;
+        var start;
+        window.requestAnimationFrame(function step(timestamp) {
+            if (!start) start = timestamp;
+            var time = timestamp - start;
+            var percent = Math.min(time / duration, 1);
+            window.scrollTo(0, startingY + diff * percent);
+            if (time < duration) {
+                window.requestAnimationFrame(step);
+            }
+        });
+    }
 
     const scrollTop = document.querySelectorAll('.scroll-top');
     scrollTop.forEach((item) => {
         item.addEventListener('click', () => {
             if (!toggleList.classList.contains('unactived-menu')) 
                 toggleList.classList.add('unactived-menu');
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "smooth"})
-        })
+            doScrolling(0, 600);;
+        });
     });
