@@ -44,7 +44,6 @@ script.
     document.addEventListener("DOMContentLoaded",function() {
     window.addEventListener("scroll", function(){
         var x = window.pageYOffset;
-        console.log(x);
         document.querySelector('.baner-content').style.backgroundPosition = `center calc(50% + ${x/111 * 50.5}px)`;
         });
     });
@@ -74,7 +73,6 @@ script.
             if (!toggleList.classList.contains('unactived-menu')) 
                 toggleList.classList.add('unactived-menu');
             let ele = document.getElementById(item.getAttribute('data-id'));
-            console.log(item.getAttribute('data-id'));
             doScrolling(ele.offsetTop, 600);
         });
     });
