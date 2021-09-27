@@ -195,6 +195,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1;
   display: none;
+  z-index: 999;
 
   &_form {
     width: 71%;
