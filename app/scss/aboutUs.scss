@@ -1,0 +1,158 @@
+.page-section {
+    padding: 150px 0px;
+    background-image: url('../images/about-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto',arial,sans-serif;
+    color: #2c343b;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.42857143;
+    .container::before{
+        display: table;
+        content: "";
+    }
+    .container {
+        padding: 0px 15px;
+        margin: auto auto;
+        .row::before{
+            display: table;
+            content: "";
+        }
+        .row {
+            margin: 0px -15px;
+            .col {
+                width: 100%;
+                position: relative;
+                padding: 0px 15px;
+                margin: 0;
+                .service-item {
+                    text-align: center;
+                    .icon {
+                        display: inline-block;
+                        width: 110px;
+                        height: 110px;
+                        text-align: center;
+                        line-height: 104px;
+                        border: 3px solid #fff;
+                        border-radius: 50%;
+                        background-color: #f7c552;
+                        img {
+                            display: inline-block;
+                            max-width: 100%;
+                            vertical-align: middle;
+                        }        
+                    }
+                    h4 {
+                        margin-bottom: 30px;
+                        margin-top: 45px;
+                        font-size: 17px;
+                        font-weight: 500;
+                        color: #fff;
+                        letter-spacing: 1px;
+                    }
+                    .line-dec {
+                        width: 100%;
+                        height: 1px;
+                        background-color: rgba(250,250,250,0.5);
+                    }
+                    .primary-blue-button {
+                        margin-top: 35px;
+                        a {
+                            display: inline-block;
+                            background-color: #33c1cf;
+                            font-size: 13px;
+                            padding: 12px 18px;
+                            color: #fff;
+                            font-weight: 500;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            border-radius: 20px;
+                        }
+                    }
+                    p {
+                        color: #fff;
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        .row::after{
+            display: table;
+            content: "";
+        }
+
+    }
+    .container::after{
+        display: table;
+        content: "";
+    }
+}
+
+@media (min-width: 768px) {
+    .page-section {
+        .container {
+            width: 750px;
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                .col {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .page-section {
+        .container {
+            width: 970px;
+            .row {
+                .col {
+                    width: 25%;
+                    p {
+                        height: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-section {
+        .container {
+            width: 1170px;
+            .row {
+                .col {
+                    p {
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .page-section {
+        .container {
+            .row {
+                .col {
+                    .service-item {
+                        margin-bottom: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
