@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+          <button class="navbar-toggle" id="nav-toggle" type="button" data-toggle="collapse" data-target="#main-nav">
+            <span class="icon-bar"> </span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand scroll-top">
+            <span>T</span>inker
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav nav unactived-menu">
+            <li>
+              <a class="scroll-top">Home</a>
+            </li>
+            <li>
+              <a class="scroll-link" data-id="about">About Us</a>
+            </li>
+            <li>
+              <a class="scroll-link" data-id="portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a class="scroll-link" data-id="blog">Blog</a>
+            </li>
+            <li>
+              <a class="scroll-link" data-id="contact-us">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="parallax-content baner-content" id="home">
+    <div class="container">
+      <div class="text-content">
+        <h2>
+          <em>TINKER </em>
+          <span>HTML5 </span>Template
+        </h2>
+        <p>Tinker is free HTML CSS template from templatemo that can be used for any kind of website. Please tell your friends about us. Thank you.</p>
+        <div class="primary-white-button">
+          <a class="scroll-link" data-id="about">Let's Start</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>const navToggleBtn = document.getElementById('nav-toggle');
+const toggleList =  document.querySelector('.navbar-nav');
+navToggleBtn.addEventListener('click', event => {
+    if (toggleList.classList.contains('unactived-menu')) 
+        toggleList.classList.remove('unactived-menu');
+    else toggleList.classList.add('unactived-menu');
+});
+
+document.addEventListener("DOMContentLoaded",function() {
+window.addEventListener("scroll", function(){
+    var x = window.pageYOffset;
+    document.querySelector('.baner-content').style.backgroundPosition = `center calc(50% + ${x/111 * 50.5}px)`;
+    });
+});
+
+document.addEventListener("DOMContentLoaded",function() {
+window.addEventListener("scroll", function(){
+    var x = window.pageYOffset;
+    if (x > 115) {
+        document.querySelector('.header').classList.add('header__scroll-effect');
+        document.querySelector('.navbar-brand').classList.add('navbar-brand__scroll-effect');
+        document.querySelectorAll('.navbar-nav li a').forEach(item => {
+            item.classList.add('a__scroll-effect');
+        });
+    } else {
+        document.querySelector('.header').classList.remove('header__scroll-effect');
+        document.querySelector('.navbar-brand').classList.remove('navbar-brand__scroll-effect');
+        document.querySelectorAll('.navbar-nav li a').forEach(item => {
+            item.classList.remove('a__scroll-effect');
+            });
+        }
+    });
+});
+
+const itemList = document.querySelectorAll('.scroll-link');
+itemList.forEach(item => {
+    item.addEventListener('click', () => {
+        if (!toggleList.classList.contains('unactived-menu')) 
+            toggleList.classList.add('unactived-menu');
+        let ele = document.getElementById(item.getAttribute('data-id'));
+        doScrolling(ele.offsetTop, 600);
+    });
+});
+
+function doScrolling(elementY, duration) {
+    var startingY = window.pageYOffset;
+    var diff = elementY - startingY;
+    var start;
+    window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp;
+        var time = timestamp - start;
+        var percent = Math.min(time / duration, 1);
+        window.scrollTo(0, startingY + diff * percent);
+        if (time < duration) {
+            window.requestAnimationFrame(step);
+        }
+    });
+}
+
+const scrollTop = document.querySelectorAll('.scroll-top');
+scrollTop.forEach((item) => {
+    item.addEventListener('click', () => {
+        if (!toggleList.classList.contains('unactived-menu')) 
+            toggleList.classList.add('unactived-menu');
+        doScrolling(0, 600);;
+    });
+});</script>
+  <section class="page-section" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="service-item">
+            <div class="icon">
+              <img src="./images/service_icon_01.png" alt="website template image">
+            </div>
+            <h4>Smart Notifications</h4>
+            <div class="line-dec"></div>
+            <p>Curabitur non risus fringilla libero accumsan molestie et quis justo. Cras aliquam tempor sem, vestibulum facilisis dui. Mauris malesuada porta.</p>
+            <div class="primary-blue-button">
+              <a class="scroll-link" data-id="portfolio">Continue Reading</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-item">
+            <div class="icon">
+              <img src="./images/service_icon_02.png" alt="website template image">
+            </div>
+            <h4>Lovely Web Design</h4>
+            <div class="line-dec"></div>
+            <p>Suspendisse magna mauris, convallis vel finibus eget, lobortis dictum neque. Nam tincidunt metus nec eros dignissim consectetur. Duis mollis.</p>
+            <div class="primary-blue-button">
+              <a class="scroll-link" data-id="portfolio">Continue Reading</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-item">
+            <div class="icon">
+              <img src="./images/service_icon_03.png" alt="website template image">
+            </div>
+            <h4>Quick Support</h4>
+            <div class="line-dec"></div>
+            <p>Etiam quis ullamcorper augue. Morbi leo libero, malesuada eget eleifend eu, interdum sed augue. Sed tempor mi quis rhoncus convallis.</p>
+            <div class="primary-blue-button">
+              <a class="scroll-link" data-id="portfolio">Continue Reading</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-item">
+            <div class="icon">
+              <img src="./images/service_icon_04.png" alt="website template image">
+            </div>
+            <h4>One-Click Setup</h4>
+            <div class="line-dec"></div>
+            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent viverra, nunc et mollis fermentum.</p>
+            <div class="primary-blue-button">
+              <a class="scroll-link" data-id="portfolio">Continue Reading</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container__our-gallery" id="portfolio">
+    <div class="gallery-content">
+      <div class="section-heading">
+        <div class="section-heading__title">
+          <h4>our gallery </h4>
+          <div class="line-dec"></div>
+          <p>In malesuada placerat ligula et bibendum. Aenean eget urna enim. Sed enim ante, bibendum nec dictum ac, gravida ac lectus.</p>
+        </div>
+        <div class="section-heading__filter">
+          <ul class="filter-list">
+            <li class="filter-list__item">
+              <span class="navtab-portfolio selected" id="showAll">show all </span>
+            </li>
+            <li class="filter-list__item">
+              <span class="navtab-portfolio" id="branding">branding </span>
+            </li>
+            <li class="filter-list__item">
+              <span class="navtab-portfolio" id="graphic">graphic </span>
+            </li>
+            <li class="filter-list__item">
+              <span class="navtab-portfolio" id="nature">nature </span>
+            </li>
+            <li class="filter-list__item">
+              <span class="navtab-portfolio" id="animation">animation</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-image">
+      <div class="collection-image">
+        <div class="collection-image__item nature showAll">
+          <img src="./images/portfolio_item_01.jpg">
+        </div>
+        <div class="collection-image__item animation showAll">
+          <img src="./images/portfolio_item_02.jpg">
+        </div>
+        <div class="collection-image__item branding showAll">
+          <img src="./images/portfolio_item_03.jpg">
+        </div>
+        <div class="collection-image__item graphic nature showAll">
+          <img src="./images/portfolio_item_04.jpg">
+        </div>
+        <div class="collection-image__item branding showAll">
+          <img src="./images/portfolio_item_05.jpg">
+        </div>
+        <div class="collection-image__item graphic animation showAll">
+          <img src="./images/portfolio_item_06.jpg">
+        </div>
+      </div>
+    </div>
+    <script>const selectionList = document.querySelectorAll('.navtab-portfolio');
+const galleryList = document.querySelectorAll('.collection-image__item');
+const showAll = document.querySelectorAll('.showAll');
+const branding = document.querySelectorAll('.branding');
+const graphic = document.querySelectorAll('.graphic')
+const nature = document.querySelectorAll('.nature')
+const animation = document.querySelectorAll('.animation')
+const selectedList = ['showAll', 'branding', 'graphic', 'nature', 'animation']
+
+selectionList.forEach(select => {
+    select.addEventListener('click', event => {
+        selectionList.forEach(_select => {
+            _select.classList.remove('selected')
+        })        
+        event.target.classList.add('selected') 
+        
+        //change image 
+        galleryList.forEach(contentImage => {
+            contentImage.classList.add('actived-hidden-image')
+        })
+
+        //- selectedList.forEach(element => {
+        //-     console.log(element)
+        //-     if(element == `${event.target.id}`) {
+        //-         //- //sai từ bước này
+        //-         element.forEach(_element => {
+        //-             _element.classList.remove('actived-hidden-image')
+        //-         })
+        //-     }
+        //- })
+
+        if (`${event.target.id}` == 'showAll') {
+            showAll.forEach(element => {
+                element.classList.remove('actived-hidden-image')
+            })
+        } else if (`${event.target.id}` == 'branding') {
+            branding.forEach(element => {
+                element.classList.remove('actived-hidden-image')
+            })
+        } else if (`${event.target.id}` == 'graphic') {
+            graphic.forEach(element => {
+                element.classList.remove('actived-hidden-image')
+            })
+        } else if (`${event.target.id}` == 'nature') {
+            nature.forEach(element => {
+                element.classList.remove('actived-hidden-image')
+            })
+        } else if (`${event.target.id}` == 'animation') {
+            animation.forEach(element => {
+                element.classList.remove('actived-hidden-image')
+            })
+        } else {
+            console.log('fail')
+        }
+
+        //- document.querySelectorAll(`.collection-image__item[data-image='${event.target.id}']`).classList.remove('actived-hidden-image')
+    })
+})</script>
+  </div>
+  <section class="slider">
+    <div class="slider_container">
+      <div class="slider_slides">
+        <!-- radio buttons start-->
+        <input id="radio1" type="radio" name="radio-btn" checked>
+        <input id="radio2" type="radio" name="radio-btn">
+        <input id="radio3" type="radio" name="radio-btn">
+        <input id="radio4" type="radio" name="radio-btn"><!-- radio buttons end-->
+        <!-- slide images start -->
+        <div class="slider_slide first">
+          <div class="slider_content">
+            <p class="slider_text">&ldquo;Quisque ullamcorper odio a nisl lacinia dictum.
+              Vestibulum malesuada ipsum in turpis finibus, ut sagittis
+              erat scelerisque. Curabitur non risus fringilla libero accumsan
+              molestie et quis justo.&rdquo;</p>
+            <h4 class="slider_name">George Rich</h4>
+            <span class="slider_span">Web Designer</span>
+          </div>
+        </div>
+        <div class="slider_slide">
+          <div class="slider_content">
+            <p class="slider_text">&ldquo;Suspendisse magna mauris, convallis vel
+              finibus eget, lobortis dictum neque. Nam tincidunt metus nec eros
+              dignissim consectetur.&rdquo;</p>
+            <h4 class="slider_name">GJohn Henry</h4>
+            <span class="slider_span">New Manager</span>
+          </div>
+        </div>
+        <div class="slider_slide">
+          <div class="slider_content">
+            <p class="slider_text">&ldquo;Aenean semper aliquam est ut maximus. Fusce id diam eget
+              orci lobortis ultricies at ac velit. Curabitur laoreet massa et fringilla sagittis.&rdquo;</p>
+            <h4 class="slider_name">Danny Cute</h4>
+            <span class="slider_span">CEO Founder</span>
+          </div>
+        </div>
+        <div class="slider_slide">
+          <div class="slider_content">
+            <p class="slider_text">&ldquo;Maecenas eu odio pharetra, elementum lorem eget, efficitur erat.
+              Duis eget justo non nisi iaculis vestibulum. Aliquam erat volutpat.&rdquo;</p>
+            <h4 class="slider_name">Richard Beal</h4>
+            <span class="slider_span">CSS Developer</span>
+          </div>
+        </div><!-- slide images end-->
+        <!-- automatic navigation start-->
+        <div class="navigation_auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div><!-- automatic navigation end-->
+      </div><!-- manual navigation start-->
+      <div class="navigation_manual">
+        <label class="manual-btn" for="radio1"></label>
+        <label class="manual-btn" for="radio2"></label>
+        <label class="manual-btn" for="radio3"></label>
+        <label class="manual-btn" for="radio4"></label>
+      </div><!-- manual navigation end-->
+    </div><!-- image slider end-->
+  </section>
+  <div class="container__blog" id="blog">
+    <div class="container__blog__content">
+      <div class="blog-section">
+        <div class="section-heading">
+          <div class="section-heading__title">
+            <h4>our blog posts</h4>
+            <div class="line-dec"> </div>
+            <p>Nam vulputate elementum nulla, sit amet congue ipsum malesuada pretium. Vivamus vel gravida quam.</p>
+          </div>
+          <div class="section-heading__filter">
+            <ul class="filter-list">
+              <btn class="filter-list__item navtab-blog actived-blog-btn" id="1">Nulla Eget Convallis Augue </btn>
+              <btn class="filter-list__item navtab-blog" id="2">Quisque Ultricies Maximus </btn>
+              <btn class="filter-list__item navtab-blog" id="3">Sed Vel Elit Et Lorem </btn>
+              <btn class="filter-list__item navtab-blog" id="4">Vivamus Purus Neque</btn>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="blog-gallery">
+        <div class="blog-content actived-blog-content" data-content="1">
+          <div class="blog-content__image">
+            <img src="./images/blog_item_01.jpg">
+          </div>
+          <div class="blog-content__text">
+            <h4>Nulla eget convallis augue </h4>
+            <span>
+              <a>Digital Marketing </a>/ <a>Honey </a>/ <a>26 September 2045</a>
+            </span>
+            <p>Donec interdum scelerisque auctor. Nulla id lorem auctor, bibendum lectus elementum, porta felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+          </div>
+        </div>
+        <div class="blog-content" data-content="2">
+          <div class="blog-content__image">
+            <img src="./images/blog_item_02.jpg">
+          </div>
+          <div class="blog-content__text">
+            <h4>Quisque ultricies maximus </h4>
+            <span>
+              <a>Branding</a>/ <a>David </a>/ <a>14 September 2045</a>
+            </span>
+            <p>Etiam fringilla posuere pretium. Maecenas tempor pellentesque elit in dapibus. Curabitur viverra urna sem, ut sollicitudin sem congue vel. Donec fringilla augue in justo molestie fermentum quis ac mi.</p>
+          </div>
+        </div>
+        <div class="blog-content" data-content="3">
+          <div class="blog-content__image">
+            <img src="./images/blog_item_03.jpg">
+          </div>
+          <div class="blog-content__text">
+            <h4>Sed vel elit et lorem </h4>
+            <span>
+              <a>Wed Design</a>/ <a>William </a>/ <a>20 September 2045</a>
+            </span>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id ipsum porta, dictum sem sed, bibendum quam. Maecenas mattis risus eget orci rhoncus.</p>
+          </div>
+        </div>
+        <div class="blog-content" data-content="4">
+          <div class="blog-content__image">
+            <img src="./images/blog_item_04.jpg">
+          </div>
+          <div class="blog-content__text">
+            <h4>Vivamus purus neque</h4>
+            <span>
+              <a>E-Commerce</a>/ <a>George</a>/ <a>14 September 2045</a>
+            </span>
+            <p>Aliquam erat volutpat. Nulla at nunc nec ante rutrum congue id in diam. Nulla at lectus non turpis placerat volutpat lacinia ut mi. Quisque ultricies maximus justo a blandit. Donec sit amet commodo arcu. Sed sit amet iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>const btnList = document.querySelectorAll('.navtab-blog');
+const contentList = document.querySelectorAll('.blog-content');
+
+btnList.forEach(btn => {
+    btn.addEventListener('click', event => {
+        btnList.forEach(_btn => {
+             _btn.classList.remove('actived-blog-btn')
+        })
+        event.target.classList.add('actived-blog-btn') 
+
+        contentList.forEach(contentTab => {
+            contentTab.classList.remove('actived-blog-content')
+        })
+        document.querySelector(`.blog-content[data-content='${event.target.id}']`).classList.add('actived-blog-content')
+    })
+})</script>
+  </div><!-- Contact us-->
+  <section class="contact" id="contact-us">
+    <!-- message-->
+    <div class="contact_message">
+      <div class="contact_message_content">
+        <h4 class="contact_message_header">CONTACT US</h4>
+        <div class="contact_line"></div>
+        <p class="contact_message_text">Nunc posuere non quam at pharetra. Mauris tincidunt purus vel ultrices malesuada. Integer euismod erat ut nulla ultrices, ut auctor eros feugiat.</p>
+        <button class="contact_message_btn">SEND US A MESSAGE </button>
+      </div>
+    </div>
+    <div class="submit">
+      <div class="submit_form">
+        <button class="submit_button-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <form>
+          <input class="submit_text" type="text" placeholder="Your name...">
+          <input class="submit_text" type="text" placeholder="Your email...">
+          <textarea class="submit_text message" placeholder="Your message..."></textarea>
+        </form>
+        <button class="submit_button-submit">SEND MESSAGE</button>
+      </div>
+    </div><!-- map-->
+    <div class="contact_map">
+      <div class="mapouter">
+        <div class="contact_map_link">
+          <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1314&amp;height=500&amp;hl=en&amp;q=Singapore Flyer&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        </div>
+        <style>
+          .mapouter {
+            position: relative;
+            text-align: right;
+            width: 100%;
+            height: 500px;
+          }
+
+          .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            width: 100%;
+            height: 500px;
+          }
+
+          .gmap_iframe {
+            height: 500px !important;
+          }
+        </style>
+      </div>
+    </div><!-- info-->
+    <div class="contact_footer">
+      <div class="contact_footer_content">
+        <div class="contact_footer_logo footer_block firstblock">
+          <h2 class="contact_footer_logo_content">
+            <p>T</p>INKER
+          </h2>
+          <p class="contact_footer_text"> Copyright &copy; 2045 Your Company </p>
+          <p class="contact_footer_text"> Design: TemplateMo </p>
+        </div>
+        <div class="contact_footer_location footer_block">
+          <h4 class="contact_footer_header">LOCATION</h4>
+          <div>
+            <div class="contact_footer_location_add first">
+              <p class="contact_footer_text">
+                <b>30 Raffles Ave,
+                  <br> Singapore 039803
+                </b>
+              </p>
+            </div>
+            <div class="contact_footer_location_add second">
+              <p class="contact_footer_text">
+                <b>Republic Blvd,
+                  <br> Singapore 038975
+                </b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contact_footer_moreinfo footer_block">
+          <h4 class="contact_footer_header">MORE INFO</h4>
+          <p class="contact_footer_text">
+            <b>Phone:</b> 090-090-0320
+            <br>
+            <b>Email:</b> tk@company.co
+          </p>
+        </div>
+        <div class="contact_footer_social footer_block footer_block lastbock">
+          <h4 class="contact_footer_header">GET SOCIAL WITH US</h4>
+          <ul class="contact_footer_social_list">
+            <li class="contact_footer_social_item">
+              <i class="fab fa-twitter"></i>
+            </li>
+            <li class="contact_footer_social_item">
+              <i class="fab fa-facebook"></i>
+            </li>
+            <li class="contact_footer_social_item">
+              <i class="fab fa-google"></i>
+            </li>
+            <li class="contact_footer_social_item">
+              <i class="fas fa-wifi"></i>
+            </li>
+            <li class="contact_footer_social_item">
+              <i class="fas fa-volleyball-ball"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="contact_footer_lastblock"></div>
+    <script src="https://kit.fontawesome.com/5a8f26faaf.js" crossorigin="anonymous"></script>
+    <script>const submit = document.querySelector(".submit");
+document.querySelector(".contact_message_btn").addEventListener("click", () => {
+submit.style.display = "block";
+})
+document.querySelector(".submit_button-close").addEventListener("click", () => {
+submit.style.display = "none";
+})</script>
+  </section>
+</body>
+
+</html>
