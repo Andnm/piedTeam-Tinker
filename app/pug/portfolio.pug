@@ -1,0 +1,96 @@
+div.container__our-gallery
+    div.gallery-content
+        div.section-heading
+            div.section-heading__title
+                h4 our gallery 
+                div.line-dec
+                p In malesuada placerat ligula et bibendum. Aenean eget urna enim. Sed enim ante, bibendum nec dictum ac, gravida ac lectus.
+            div.section-heading__filter
+                ul.filter-list
+                    li(class='filter-list__item') 
+                        span(class='navtab-portfolio selected' id='showAll') show all 
+                    li(class='filter-list__item')
+                        span(class='navtab-portfolio' id='branding') branding 
+                    li(class='filter-list__item')
+                        span(class='navtab-portfolio' id='graphic') graphic 
+                    li(class='filter-list__item')
+                        span(class='navtab-portfolio' id='nature') nature 
+                    li(class='filter-list__item')
+                        span(class='navtab-portfolio' id='animation') animation
+    div.gallery-image
+        div.collection-image 
+            div(class='collection-image__item nature showAll') 
+                img(src="./images/portfolio_item_01.jpg")
+            div(class='collection-image__item animation showAll') 
+                img(src="./images/portfolio_item_02.jpg")
+            div(class='collection-image__item branding showAll') 
+                img(src="./images/portfolio_item_03.jpg")
+            div(class='collection-image__item graphic nature showAll') 
+                img(src="./images/portfolio_item_04.jpg")
+            div(class='collection-image__item branding showAll') 
+                img(src="./images/portfolio_item_05.jpg")
+            div(class='collection-image__item graphic animation showAll') 
+                img(src="./images/portfolio_item_06.jpg")
+    script.
+        const selectionList = document.querySelectorAll('.navtab-portfolio');
+        const galleryList = document.querySelectorAll('.collection-image__item');
+        const showAll = document.querySelectorAll('.showAll');
+        const branding = document.querySelectorAll('.branding');
+        const graphic = document.querySelectorAll('.graphic')
+        const nature = document.querySelectorAll('.nature')
+        const animation = document.querySelectorAll('.animation')
+        const selectedList = ['showAll', 'branding', 'graphic', 'nature', 'animation']
+
+        selectionList.forEach(select => {
+            select.addEventListener('click', event => {
+                selectionList.forEach(_select => {
+                    _select.classList.remove('selected')
+                })        
+                event.target.classList.add('selected') 
+                
+                //change image 
+                galleryList.forEach(contentImage => {
+                    contentImage.classList.add('actived-hidden-image')
+                })
+
+                //- selectedList.forEach(element => {
+                //-     console.log(element)
+                //-     if(element == `${event.target.id}`) {
+                //-         //- //sai từ bước này
+                //-         element.forEach(_element => {
+                //-             _element.classList.remove('actived-hidden-image')
+                //-         })
+                //-     }
+                //- })
+
+                if (`${event.target.id}` == 'showAll') {
+                    showAll.forEach(element => {
+                        element.classList.remove('actived-hidden-image')
+                    })
+                } else if (`${event.target.id}` == 'branding') {
+                    branding.forEach(element => {
+                        element.classList.remove('actived-hidden-image')
+                    })
+                } else if (`${event.target.id}` == 'graphic') {
+                    graphic.forEach(element => {
+                        element.classList.remove('actived-hidden-image')
+                    })
+                } else if (`${event.target.id}` == 'nature') {
+                    nature.forEach(element => {
+                        element.classList.remove('actived-hidden-image')
+                    })
+                } else if (`${event.target.id}` == 'animation') {
+                    animation.forEach(element => {
+                        element.classList.remove('actived-hidden-image')
+                    })
+                } else {
+                    console.log('fail')
+                }
+
+                //- document.querySelectorAll(`.collection-image__item[data-image='${event.target.id}']`).classList.remove('actived-hidden-image')
+            })
+        })
+
+        
+        
+
