@@ -1,0 +1,102 @@
+.header
+    .container
+        nav.navbar.navbar-inverse(role="navigation")
+            .navbar-header
+                button#nav-toggle.navbar-toggle(type="button" data-toggle="collapse" data-target="#main-nav")
+                    span.icon-bar 
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand.scroll-top 
+                    span T
+                    |inker    
+            #main-nav.collapse.navbar-collapse 
+                ul.navbar-nav.nav.unactived-menu 
+                    li
+                        a.scroll-top Home
+                    li
+                        a.scroll-link(data-id="about") About Us
+                    li
+                        a.scroll-link(data-id="portfolio") Portfolio
+                    li
+                        a.scroll-link(data-id="blog") Blog
+                    li
+                        a.scroll-link(data-id="contact-us") Contact Us
+
+#home.parallax-content.baner-content
+    .container
+        .text-content 
+            h2 
+                em TINKER 
+                span HTML5 
+                | Template
+            p Tinker is free HTML CSS template from templatemo that can be used for any kind of website. Please tell your friends about us. Thank you.
+            .primary-white-button 
+                a.scroll-link(data-id="about") Let's Start
+script.
+    const navToggleBtn = document.getElementById('nav-toggle');
+    const toggleList =  document.querySelector('.navbar-nav');
+    navToggleBtn.addEventListener('click', event => {
+        if (toggleList.classList.contains('unactived-menu')) 
+            toggleList.classList.remove('unactived-menu');
+        else toggleList.classList.add('unactived-menu');
+    });
+
+    document.addEventListener("DOMContentLoaded",function() {
+    window.addEventListener("scroll", function(){
+        var x = window.pageYOffset;
+        document.querySelector('.baner-content').style.backgroundPosition = `center calc(50% + ${x/111 * 50.5}px)`;
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded",function() {
+    window.addEventListener("scroll", function(){
+        var x = window.pageYOffset;
+        if (x > 115) {
+            document.querySelector('.header').classList.add('header__scroll-effect');
+            document.querySelector('.navbar-brand').classList.add('navbar-brand__scroll-effect');
+            document.querySelectorAll('.navbar-nav li a').forEach(item => {
+                item.classList.add('a__scroll-effect');
+            });
+        } else {
+            document.querySelector('.header').classList.remove('header__scroll-effect');
+            document.querySelector('.navbar-brand').classList.remove('navbar-brand__scroll-effect');
+            document.querySelectorAll('.navbar-nav li a').forEach(item => {
+                item.classList.remove('a__scroll-effect');
+                });
+            }
+        });
+    });
+
+    const itemList = document.querySelectorAll('.scroll-link');
+    itemList.forEach(item => {
+        item.addEventListener('click', () => {
+            if (!toggleList.classList.contains('unactived-menu')) 
+                toggleList.classList.add('unactived-menu');
+            let ele = document.getElementById(item.getAttribute('data-id'));
+            doScrolling(ele.offsetTop, 600);
+        });
+    });
+
+    function doScrolling(elementY, duration) {
+        var startingY = window.pageYOffset;
+        var diff = elementY - startingY;
+        var start;
+        window.requestAnimationFrame(function step(timestamp) {
+            if (!start) start = timestamp;
+            var time = timestamp - start;
+            var percent = Math.min(time / duration, 1);
+            window.scrollTo(0, startingY + diff * percent);
+            if (time < duration) {
+                window.requestAnimationFrame(step);
+            }
+        });
+    }
+
+    const scrollTop = document.querySelectorAll('.scroll-top');
+    scrollTop.forEach((item) => {
+        item.addEventListener('click', () => {
+            if (!toggleList.classList.contains('unactived-menu')) 
+                toggleList.classList.add('unactived-menu');
+            doScrolling(0, 600);;
+        });
+    });
