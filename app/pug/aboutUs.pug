@@ -37,4 +37,71 @@ section#about.page-section
                     p Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent viverra, nunc et mollis fermentum.
                     .primary-blue-button
                         a.scroll-link(data-id="portfolio") Continue Reading
-                        
+script.
+    const navToggleBtn = document.getElementById('nav-toggle');
+    const toggleList =  document.querySelector('.navbar-nav');
+    navToggleBtn.addEventListener('click', event => {
+        if (toggleList.classList.contains('unactived-menu')) 
+            toggleList.classList.remove('unactived-menu');
+        else toggleList.classList.add('unactived-menu');
+    });
+
+    document.addEventListener("DOMContentLoaded",function() {
+    window.addEventListener("scroll", function(){
+        var x = window.pageYOffset;
+        document.querySelector('.baner-content').style.backgroundPosition = `center calc(50% + ${x/111 * 50.5}px)`;
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded",function() {
+    window.addEventListener("scroll", function(){
+        var x = window.pageYOffset;
+        if (x > 115) {
+            document.querySelector('.header').classList.add('header__scroll-effect');
+            document.querySelector('.navbar-brand').classList.add('navbar-brand__scroll-effect');
+            document.querySelectorAll('.navbar-nav li a').forEach(item => {
+                item.classList.add('a__scroll-effect');
+            });
+        } else {
+            document.querySelector('.header').classList.remove('header__scroll-effect');
+            document.querySelector('.navbar-brand').classList.remove('navbar-brand__scroll-effect');
+            document.querySelectorAll('.navbar-nav li a').forEach(item => {
+                item.classList.remove('a__scroll-effect');
+                });
+            }
+        });
+    });
+
+    const itemList = document.querySelectorAll('.scroll-link');
+    itemList.forEach(item => {
+        item.addEventListener('click', () => {
+            if (!toggleList.classList.contains('unactived-menu')) 
+                toggleList.classList.add('unactived-menu');
+            let ele = document.getElementById(item.getAttribute('data-id'));
+            doScrolling(ele.offsetTop, 600);
+        });
+    });
+
+    function doScrolling(elementY, duration) {
+        var startingY = window.pageYOffset;
+        var diff = elementY - startingY;
+        var start;
+        window.requestAnimationFrame(function step(timestamp) {
+            if (!start) start = timestamp;
+            var time = timestamp - start;
+            var percent = Math.min(time / duration, 1);
+            window.scrollTo(0, startingY + diff * percent);
+            if (time < duration) {
+                window.requestAnimationFrame(step);
+            }
+        });
+    }
+
+    const scrollTop = document.querySelectorAll('.scroll-top');
+    scrollTop.forEach((item) => {
+        item.addEventListener('click', () => {
+            if (!toggleList.classList.contains('unactived-menu')) 
+                toggleList.classList.add('unactived-menu');
+            doScrolling(0, 600);;
+        });
+    });
